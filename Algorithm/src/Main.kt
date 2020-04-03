@@ -1,3 +1,5 @@
+import kotlin.math.max
+
 fun main(args: Array<String>) {
 
     val result = Solution().maxSubArray(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4))
@@ -5,20 +7,21 @@ fun main(args: Array<String>) {
 }
 
 // [-2,1,-3,4,-1,2,1,-5,4]
-fun IntArray.sumSubArray(): Int = this.fold(0) { a, b -> a + b }
 
 class Solution {
     fun maxSubArray(nums: IntArray): Int {
 
         var maxNum = nums[0]
-        for (i in nums.indices) {
-            for (j in i..nums.lastIndex) {
-                val foldResult = nums.sliceArray(i..j)
-                        .sumSubArray()
+        var cur = maxNum
 
-                if (maxNum < foldResult) maxNum = foldResult
-
+        for (i in 1..nums.lastIndex) {
+            if (cur + nums[i] > nums[i]) {
+                cur += nums[i]
+            } else {
+                cur = nums[i]
             }
+
+            maxNum = max(cur, maxNum)
         }
         return maxNum
     }
