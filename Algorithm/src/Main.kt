@@ -25,4 +25,8 @@ class Solution {
         }
         return maxNum
     }
+
+    fun singleNumber(nums: IntArray): Int {
+        return 0
+    }
 }
