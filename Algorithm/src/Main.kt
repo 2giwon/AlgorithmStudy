@@ -4,6 +4,9 @@ fun main(args: Array<String>) {
 
     val result = Solution().maxSubArray(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4))
     println(result)
+
+    val result2 = Solution().singleNumber(intArrayOf(2, 2, 1))
+    println(result2)
 }
 
 // [-2,1,-3,4,-1,2,1,-5,4]
@@ -27,6 +30,11 @@ class Solution {
     }
 
     fun singleNumber(nums: IntArray): Int {
-        return 0
+        return nums.groupBy { it }
+                .filter { it.value.size <= 1 }
+                .keys
+                .first()
+
+
     }
 }
