@@ -9,8 +9,8 @@ fun main(args: Array<String>) {
 //    val result2 = Solution().singleNumber(intArrayOf(2, 2, 1))
 //    println(result2)
 
-    val result = Solution().isHappy(2)
-    println(result)
+//    val result = Solution().isHappy(2)
+//    println(result)
 }
 
 // [-2,1,-3,4,-1,2,1,-5,4]
@@ -60,7 +60,7 @@ class Solution {
         }
     }
 
-    fun maxSubArray(nums: IntArray): Int {
+    fun moveZeroes(nums: IntArray): Unit {
 
     }
 
