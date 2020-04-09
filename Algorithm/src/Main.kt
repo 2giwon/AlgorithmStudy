@@ -1,12 +1,16 @@
 import kotlin.math.max
+import kotlin.math.pow
 
 fun main(args: Array<String>) {
 
-    val result = Solution().maxSubArray(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4))
-    println(result)
+//    val result = Solution().maxSubArray(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4))
+//    println(result)
+//
+//    val result2 = Solution().singleNumber(intArrayOf(2, 2, 1))
+//    println(result2)
 
-    val result2 = Solution().singleNumber(intArrayOf(2, 2, 1))
-    println(result2)
+    val result = Solution().isHappy(2)
+    println(result)
 }
 
 // [-2,1,-3,4,-1,2,1,-5,4]
@@ -34,7 +38,36 @@ class Solution {
                 .filter { it.value.size <= 1 }
                 .keys
                 .first()
-
-
     }
+
+    private val nums = mutableListOf<Int>()
+
+    fun isHappy(n: Int): Boolean {
+        var v = n
+        return when {
+            nums.contains(v) -> false
+            v == 1 -> true
+            else -> {
+                nums.add(n)
+                var sum = 0
+                while (v != 0) {
+                    sum += (v % 10).toDouble().pow(2.0).toInt()
+                    v /= 10
+                }
+
+                return isHappy(sum)
+            }
+        }
+    }
+
+//    private fun reqPowSum(n: Int): Int {
+//        var v = n
+//        return if ((log10(v.toFloat()).toInt() + 1) == 1) {
+//            v
+//        } else {
+//
+//
+//            reqPowSum(sum)
+//        }
+//    }
 }
