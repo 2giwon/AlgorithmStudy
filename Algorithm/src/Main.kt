@@ -11,6 +11,8 @@ fun main(args: Array<String>) {
 
 //    val result = Solution().isHappy(2)
 //    println(result)
+
+    Solution().moveZeroes(intArrayOf(1, 0))
 }
 
 // [-2,1,-3,4,-1,2,1,-5,4]
@@ -61,7 +63,15 @@ class Solution {
     }
 
     fun moveZeroes(nums: IntArray): Unit {
+        val list = mutableListOf<Int>()
 
+        val map = nums.groupBy { it == 0 }
+        list.addAll(map[false]?.toList() ?: emptyList())
+        list.addAll(map[true]?.toList() ?: emptyList())
+
+        for (i in 0 until nums.size) {
+            nums[i] = list[i]
+        }
     }
 
 }
