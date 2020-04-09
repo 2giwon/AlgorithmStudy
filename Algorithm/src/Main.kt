@@ -60,14 +60,8 @@ class Solution {
         }
     }
 
-//    private fun reqPowSum(n: Int): Int {
-//        var v = n
-//        return if ((log10(v.toFloat()).toInt() + 1) == 1) {
-//            v
-//        } else {
-//
-//
-//            reqPowSum(sum)
-//        }
-//    }
+    fun maxSubArray(nums: IntArray): Int {
+
+    }
+
 }
