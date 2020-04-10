@@ -12,7 +12,12 @@ fun main(args: Array<String>) {
 //    val result = Solution().isHappy(2)
 //    println(result)
 
-    Solution().moveZeroes(intArrayOf(1, 0))
+//    Solution().moveZeroes(intArrayOf(1, 0))
+
+//    println(Solution().singleNumber2(intArrayOf(2, 2, 1)))
+
+    println(Solution().maxProfit(intArrayOf(7, 1, 5, 3, 6, 4)))
+
 }
 
 // [-2,1,-3,4,-1,2,1,-5,4]
@@ -40,6 +45,13 @@ class Solution {
                 .filter { it.value.size <= 1 }
                 .keys
                 .first()
+    }
+
+    fun singleNumber2(nums: IntArray): Int {
+        var result = 0
+        nums.forEach { result = result xor it }
+
+        return result
     }
 
     private val nums = mutableListOf<Int>()
@@ -74,4 +86,26 @@ class Solution {
         }
     }
 
+    fun maxProfit(prices: IntArray): Int {
+        var min = prices[0]
+        var start = 0
+        for (i in 1..prices.lastIndex) {
+            val e = prices[i]
+            if (min > e) {
+                start = i
+                min = e
+            }
+        }
+
+        var buy = prices[start]
+        var sell: Int = Int.MAX_VALUE
+        var max = 0
+
+        do {
+            sell = prices.sliceArray((start)..prices.lastIndex).maxBy { it < sell } ?: 0
+            max = max(sell - buy, max)
+        } while (sell > buy)
+
+        return max
+    }
 }
