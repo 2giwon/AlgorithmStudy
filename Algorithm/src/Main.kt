@@ -16,11 +16,10 @@ fun main(args: Array<String>) {
 
 //    println(Solution().singleNumber2(intArrayOf(2, 2, 1)))
 
-    println(Solution().maxProfit(intArrayOf(7, 3, 1, 0, 8, 2)))
+//    println(Solution().maxProfit(intArrayOf(7, 3, 1, 0, 8, 2)))
 
+    println(Solution().groupAnagrams(arrayOf("eat", "tea", "tan", "ate", "nat", "bat")))
 }
-
-// [-2,1,-3,4,-1,2,1,-5,4]
 
 class Solution {
     fun maxSubArray(nums: IntArray): Int {
