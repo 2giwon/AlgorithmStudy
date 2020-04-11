@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
 
 //    println(Solution().singleNumber2(intArrayOf(2, 2, 1)))
 
-    println(Solution().maxProfit(intArrayOf(5, 4, 3, 2, 1)))
+    println(Solution().maxProfit(intArrayOf(7, 3, 1, 0, 8, 2)))
 
 }
 
@@ -88,11 +88,15 @@ class Solution {
 
     fun maxProfit(prices: IntArray): Int {
         var diff = 0
-        for (i in 1 until prices.size) {
+        for (i in 1 until prices.lastIndex) {
             if (prices[i] > prices[i - 1]) {
                 diff += prices[i] - prices[i - 1]
             }
         }
         return diff
+    }
+
+    fun groupAnagrams(strs: Array<String>): List<List<String>> {
+        return emptyList()
     }
 }
