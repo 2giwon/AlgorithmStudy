@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
 
 //    println(Solution().singleNumber2(intArrayOf(2, 2, 1)))
 
-    println(Solution().maxProfit(intArrayOf(7, 1, 5, 3, 6, 4)))
+    println(Solution().maxProfit(intArrayOf(5, 4, 3, 2, 1)))
 
 }
 
@@ -81,31 +81,18 @@ class Solution {
         list.addAll(map[false]?.toList() ?: emptyList())
         list.addAll(map[true]?.toList() ?: emptyList())
 
-        for (i in 0 until nums.size) {
+        for (i in nums.indices) {
             nums[i] = list[i]
         }
     }
 
     fun maxProfit(prices: IntArray): Int {
-        var min = prices[0]
-        var start = 0
-        for (i in 1..prices.lastIndex) {
-            val e = prices[i]
-            if (min > e) {
-                start = i
-                min = e
+        var diff = 0
+        for (i in 1 until prices.size) {
+            if (prices[i] > prices[i - 1]) {
+                diff += prices[i] - prices[i - 1]
             }
         }
-
-        var buy = prices[start]
-        var sell: Int = Int.MAX_VALUE
-        var max = 0
-
-        do {
-            sell = prices.sliceArray((start)..prices.lastIndex).maxBy { it < sell } ?: 0
-            max = max(sell - buy, max)
-        } while (sell > buy)
-
-        return max
+        return diff
     }
 }
