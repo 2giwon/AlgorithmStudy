@@ -18,7 +18,9 @@ fun main(args: Array<String>) {
 
 //    println(Solution().maxProfit(intArrayOf(7, 3, 1, 0, 8, 2)))
 
-    println(Solution().groupAnagrams(arrayOf("eat", "tea", "tan", "ate", "nat", "bat")))
+//    println(Solution().groupAnagrams(arrayOf("eat", "tea", "tan", "ate", "nat", "bat")))
+
+    println(Solution().countElements(intArrayOf(1, 2, 3)))
 }
 
 class Solution {
@@ -105,5 +107,9 @@ class Solution {
 
     private fun String.sortedString(): String {
         return toCharArray().sorted().joinToString("")
+    }
+
+    fun countElements(arr: IntArray): Int {
+        return 0
     }
 }
