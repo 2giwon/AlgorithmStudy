@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
 
 //    println(Solution().groupAnagrams(arrayOf("eat", "tea", "tan", "ate", "nat", "bat")))
 
-    println(Solution().countElements(intArrayOf(1, 2, 3)))
+    println(Solution().countElements(intArrayOf(1, 3, 2, 3, 5, 0)))
 }
 
 class Solution {
@@ -89,7 +89,7 @@ class Solution {
 
     fun maxProfit(prices: IntArray): Int {
         var diff = 0
-        for (i in 1 until prices.lastIndex) {
+        for (i in 1..prices.lastIndex) {
             if (prices[i] > prices[i - 1]) {
                 diff += prices[i] - prices[i - 1]
             }
@@ -110,6 +110,17 @@ class Solution {
     }
 
     fun countElements(arr: IntArray): Int {
-        return 0
+        arr.sort()
+        var result = 0
+        arr.forEachIndexed { index, v ->
+            for (i in index + 1..arr.lastIndex) {
+                if (v + 1 == arr[i]) {
+                    result++
+                    break
+                }
+            }
+        }
+
+        return result
     }
 }
