@@ -20,7 +20,10 @@ fun main(args: Array<String>) {
 
 //    println(Solution().groupAnagrams(arrayOf("eat", "tea", "tan", "ate", "nat", "bat")))
 
-    println(Solution().countElements(intArrayOf(1, 3, 2, 3, 5, 0)))
+//    println(Solution().countElements(intArrayOf(1, 3, 2, 3, 5, 0)))
+
+    // week 2
+    println(Solution().middleNode(Solution.ListNode()))
 }
 
 class Solution {
@@ -123,4 +126,19 @@ class Solution {
 
         return result
     }
+
+    /**
+     * Example:
+     * var li = ListNode(5)
+     * var v = li.`val`
+     * Definition for singly-linked list.
+     * class ListNode(var `val`: Int) {
+     *     var next: ListNode? = null
+     * }
+     */
+    fun middleNode(head: ListNode?): ListNode? {
+        return ListNode()
+    }
+
+    class ListNode
 }
