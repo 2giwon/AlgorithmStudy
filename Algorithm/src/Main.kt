@@ -23,7 +23,21 @@ fun main(args: Array<String>) {
 //    println(Solution().countElements(intArrayOf(1, 3, 2, 3, 5, 0)))
 
     // week 2
-    println(Solution().middleNode(Solution.ListNode()))
+
+//    [65,66,26,77,96,86,11,21,13,80]
+    val head = ListNode(65).apply {
+        next = ListNode(66).apply {
+            next = ListNode(26).apply {
+                next = ListNode(77).apply {
+                    next = ListNode(96).apply {
+                        next = ListNode(86).apply { next = ListNode(11).apply { next = ListNode(21).apply { next = ListNode(13).apply { next = ListNode(80) } } } }
+                    }
+                }
+            }
+        }
+    }
+
+    println(Solution().middleNode(head)?.v)
 }
 
 class Solution {
@@ -137,8 +151,37 @@ class Solution {
      * }
      */
     fun middleNode(head: ListNode?): ListNode? {
-        return ListNode()
+        val middleValue = findMaxNode(head, 1)?.let {
+            it / 2 + 1
+        }
+
+        var next: ListNode? = ListNode(head?.v ?: 0).apply { next = head?.next }
+        var result: ListNode? = head
+
+        var count = 1
+        while (next != null) {
+            if (count == middleValue) {
+                result = next
+                break
+            }
+
+            next = next?.next
+            count++
+        }
+
+        return result
     }
 
-    class ListNode
+    private fun findMaxNode(head: ListNode?, count: Int): Int? {
+        var c = count
+        return if (head?.next == null) {
+            c
+        } else {
+            findMaxNode(head.next, ++c)
+        }
+    }
+}
+
+class ListNode(val v: Int) {
+    var next: ListNode? = null
 }
