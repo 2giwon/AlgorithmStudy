@@ -25,19 +25,21 @@ fun main(args: Array<String>) {
     // week 2
 
 //    [65,66,26,77,96,86,11,21,13,80]
-    val head = ListNode(65).apply {
-        next = ListNode(66).apply {
-            next = ListNode(26).apply {
-                next = ListNode(77).apply {
-                    next = ListNode(96).apply {
-                        next = ListNode(86).apply { next = ListNode(11).apply { next = ListNode(21).apply { next = ListNode(13).apply { next = ListNode(80) } } } }
-                    }
-                }
-            }
-        }
-    }
+//    val head = ListNode(65).apply {
+//        next = ListNode(66).apply {
+//            next = ListNode(26).apply {
+//                next = ListNode(77).apply {
+//                    next = ListNode(96).apply {
+//                        next = ListNode(86).apply { next = ListNode(11).apply { next = ListNode(21).apply { next = ListNode(13).apply { next = ListNode(80) } } } }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+//    println(Solution().middleNode(head)?.v)
 
-    println(Solution().middleNode(head)?.v)
+    println(Solution().backspaceCompare("ab#c", "ad#c"))
 }
 
 class Solution {
@@ -192,6 +194,11 @@ class Solution {
 
         return slow
     }
+
+    fun backspaceCompare(S: String, T: String): Boolean {
+        return false
+    }
+
 }
 
 class ListNode(val v: Int) {
