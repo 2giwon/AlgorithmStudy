@@ -150,35 +150,47 @@ class Solution {
      *     var next: ListNode? = null
      * }
      */
+//    fun middleNode(head: ListNode?): ListNode? {
+//        val middleValue = findMaxNode(head, 1)?.let {
+//            it / 2 + 1
+//        }
+//
+//        var next: ListNode? = ListNode(head?.v ?: 0).apply { next = head?.next }
+//        var result: ListNode? = head
+//
+//        var count = 1
+//        while (next != null) {
+//            if (count == middleValue) {
+//                result = next
+//                break
+//            }
+//
+//            next = next?.next
+//            count++
+//        }
+//
+//        return result
+//    }
+
+//    private fun findMaxNode(head: ListNode?, count: Int): Int? {
+//        var c = count
+//        return if (head?.next == null) {
+//            c
+//        } else {
+//            findMaxNode(head.next, ++c)
+//        }
+//    }
+
     fun middleNode(head: ListNode?): ListNode? {
-        val middleValue = findMaxNode(head, 1)?.let {
-            it / 2 + 1
+        var slow = head
+        var fast = head
+
+        while (fast?.next != null) {
+            fast = fast.next?.next
+            slow = slow?.next
         }
 
-        var next: ListNode? = ListNode(head?.v ?: 0).apply { next = head?.next }
-        var result: ListNode? = head
-
-        var count = 1
-        while (next != null) {
-            if (count == middleValue) {
-                result = next
-                break
-            }
-
-            next = next?.next
-            count++
-        }
-
-        return result
-    }
-
-    private fun findMaxNode(head: ListNode?, count: Int): Int? {
-        var c = count
-        return if (head?.next == null) {
-            c
-        } else {
-            findMaxNode(head.next, ++c)
-        }
+        return slow
     }
 }
 
