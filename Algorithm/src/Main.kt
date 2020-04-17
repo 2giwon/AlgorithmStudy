@@ -39,7 +39,7 @@ fun main(args: Array<String>) {
 //
 //    println(Solution().middleNode(head)?.v)
 
-    println(Solution().backspaceCompare("ab#c", "ad#c"))
+    println(Solution().backspaceCompare("a##c", "#a#c"))
 }
 
 class Solution {
@@ -152,38 +152,38 @@ class Solution {
      *     var next: ListNode? = null
      * }
      */
-//    fun middleNode(head: ListNode?): ListNode? {
-//        val middleValue = findMaxNode(head, 1)?.let {
-//            it / 2 + 1
-//        }
-//
-//        var next: ListNode? = ListNode(head?.v ?: 0).apply { next = head?.next }
-//        var result: ListNode? = head
-//
-//        var count = 1
-//        while (next != null) {
-//            if (count == middleValue) {
-//                result = next
-//                break
-//            }
-//
-//            next = next?.next
-//            count++
-//        }
-//
-//        return result
-//    }
-
-//    private fun findMaxNode(head: ListNode?, count: Int): Int? {
-//        var c = count
-//        return if (head?.next == null) {
-//            c
-//        } else {
-//            findMaxNode(head.next, ++c)
-//        }
-//    }
-
     fun middleNode(head: ListNode?): ListNode? {
+        val middleValue = findMaxNode(head, 1)?.let {
+            it / 2 + 1
+        }
+
+        var next: ListNode? = ListNode(head?.v ?: 0).apply { next = head?.next }
+        var result: ListNode? = head
+
+        var count = 1
+        while (next != null) {
+            if (count == middleValue) {
+                result = next
+                break
+            }
+
+            next = next?.next
+            count++
+        }
+
+        return result
+    }
+
+    private fun findMaxNode(head: ListNode?, count: Int): Int? {
+        var c = count
+        return if (head?.next == null) {
+            c
+        } else {
+            findMaxNode(head.next, ++c)
+        }
+    }
+
+    fun middleNodeAnother(head: ListNode?): ListNode? {
         var slow = head
         var fast = head
 
@@ -196,7 +196,26 @@ class Solution {
     }
 
     fun backspaceCompare(S: String, T: String): Boolean {
-        return false
+        var s: String = ""
+        var t: String = ""
+
+        S.forEach {
+            if (it == '#') {
+                s = s.dropLast(1)
+            } else {
+                s += it
+            }
+        }
+
+        T.forEach {
+            if (it == '#') {
+                t = t.dropLast(1)
+            } else {
+                t += it
+            }
+        }
+
+        return s == t
     }
 
 }
