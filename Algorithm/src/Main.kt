@@ -39,7 +39,25 @@ fun main(args: Array<String>) {
 //
 //    println(Solution().middleNode(head)?.v)
 
-    println(Solution().backspaceCompare("a##c", "#a#c"))
+//    println(Solution().backspaceCompare("a##c", "#a#c"))
+
+//    MinStack minStack = new MinStack();
+//    minStack.push(-2);
+//    minStack.push(0);
+//    minStack.push(-3);
+//    minStack.getMin();   --> Returns -3.
+//            minStack.pop();
+//    minStack.top();      --> Returns 0.
+//            minStack.getMin();   --> Returns -2.
+
+    val minStack = MinStack()
+    minStack.push(-2)
+    minStack.push(0)
+    minStack.push(-3)
+    println(minStack.getMin())
+    minStack.pop()
+    println(minStack.top())
+    println(minStack.getMin())
 }
 
 class Solution {
@@ -218,6 +236,7 @@ class Solution {
         return s == t
     }
 
+
 }
 
 class ListNode(val v: Int) {
@@ -227,22 +246,22 @@ class ListNode(val v: Int) {
 class MinStack {
 
     /** initialize your data structure here. */
-
+    private val stack = mutableListOf<Int>()
 
     fun push(x: Int) {
-
+        stack.add(x)
     }
 
     fun pop() {
-
+        stack.removeAt(stack.lastIndex)
     }
 
     fun top(): Int {
-        return 0
+        return stack.last()
     }
 
     fun getMin(): Int {
-        return 0
+        return stack.min() ?: 0
     }
 
 }
