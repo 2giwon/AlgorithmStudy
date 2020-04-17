@@ -50,14 +50,23 @@ fun main(args: Array<String>) {
 //    minStack.top();      --> Returns 0.
 //            minStack.getMin();   --> Returns -2.
 
-    val minStack = MinStack()
-    minStack.push(-2)
-    minStack.push(0)
-    minStack.push(-3)
-    println(minStack.getMin())
-    minStack.pop()
-    println(minStack.top())
-    println(minStack.getMin())
+//    val minStack = MinStack()
+//    minStack.push(-2)
+//    minStack.push(0)
+//    minStack.push(-3)
+//    println(minStack.getMin())
+//    minStack.pop()
+//    println(minStack.top())
+//    println(minStack.getMin())
+
+    val tree = TreeNode(1).apply {
+        left = TreeNode(2).apply {
+            left = TreeNode(4)
+            right = TreeNode(5)
+        }
+        right = TreeNode(3)
+    }
+    println(Solution().diameterOfBinaryTree(tree))
 }
 
 class Solution {
@@ -236,7 +245,36 @@ class Solution {
         return s == t
     }
 
+    /**
+     * Example:
+     * var ti = TreeNode(5)
+     * var v = ti.`val`
+     * Definition for a binary tree node.
+     * class TreeNode(var `val`: Int) {
+     *     var left: TreeNode? = null
+     *     var right: TreeNode? = null
+     * }
+     */
+    private var max = 0
 
+    fun diameterOfBinaryTree(root: TreeNode?): Int {
+        maxDepth(root)
+        return max
+    }
+
+    private fun maxDepth(root: TreeNode?): Int {
+        if (root == null) return 0
+        val left = maxDepth(root.left)
+        val right = maxDepth(root.right)
+
+        max = max(max, left + right)
+        return max(left, right) + 1
+    }
+}
+
+class TreeNode(var `val`: Int) {
+    var left: TreeNode? = null
+    var right: TreeNode? = null
 }
 
 class ListNode(val v: Int) {
