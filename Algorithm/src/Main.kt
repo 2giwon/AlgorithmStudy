@@ -1,6 +1,6 @@
 
 fun main(args: Array<String>) {
-    Solution.lastStoneWeight()
+    Solution.findMaxLength()
 }
 
 
