@@ -11,62 +11,84 @@ object Solution {
         println(HappyNumber().isHappy(v))
     }
 
-    fun lastStoneWeight(stones: IntArray = intArrayOf(2, 7, 4, 1, 8, 1)) {
-        println(LastStoneWeight().lastStoneWeight(stones))
+    fun moveZeroes(array: IntArray = intArrayOf(1, 0)) {
+        println(MaxZeroes().moveZeroes(array))
     }
-//    Solution().moveZeroes(intArrayOf(1, 0))
 
-//    println(Solution().singleNumber2(intArrayOf(2, 2, 1)))
+    fun singleNumber2(nums: IntArray = intArrayOf(2, 2, 1)) {
+        println(SingleNumber().singleNumber2(nums))
+    }
 
-//    println(Solution().maxProfit(intArrayOf(7, 3, 1, 0, 8, 2)))
+    fun maxProfit(nums: IntArray = intArrayOf(7, 3, 1, 0, 8, 2)) {
+        println(MaxProfit().maxProfit(nums))
+    }
 
-//    println(Solution().groupAnagrams(arrayOf("eat", "tea", "tan", "ate", "nat", "bat")))
+    fun groupAnagrams(strings: Array<String> = arrayOf("eat", "tea", "tan", "ate", "nat", "bat")) {
+        println(GroupAnagrams().groupAnagrams(strings))
+    }
 
-//    println(Solution().countElements(intArrayOf(1, 3, 2, 3, 5, 0)))
+    fun countElements(nums: IntArray = intArrayOf(1, 3, 2, 3, 5, 0)) {
+        println(CountElements().countElements(nums))
+    }
 
     // week 2
 
-//    [65,66,26,77,96,86,11,21,13,80]
-//    val head = ListNode(65).apply {
-//        next = ListNode(66).apply {
-//            next = ListNode(26).apply {
-//                next = ListNode(77).apply {
-//                    next = ListNode(96).apply {
-//                        next = ListNode(86).apply { next = ListNode(11).apply { next = ListNode(21).apply { next = ListNode(13).apply { next = ListNode(80) } } } }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//
-//    println(Solution().middleNode(head)?.v)
+    fun middleNode() {
+        //    [65,66,26,77,96,86,11,21,13,80]
+        val head = ListNode(65).apply {
+            next = ListNode(66).apply {
+                next = ListNode(26).apply {
+                    next = ListNode(77).apply {
+                        next = ListNode(96).apply {
+                            next = ListNode(86).apply { next = ListNode(11).apply { next = ListNode(21).apply { next = ListNode(13).apply { next = ListNode(80) } } } }
+                        }
+                    }
+                }
+            }
+        }
 
-//    println(Solution().backspaceCompare("a##c", "#a#c"))
+        println(MiddleNode().middleNode(head))
+    }
 
-//    MinStack minStack = new MinStack();
-//    minStack.push(-2);
-//    minStack.push(0);
-//    minStack.push(-3);
-//    minStack.getMin();   --> Returns -3.
-//            minStack.pop();
-//    minStack.top();      --> Returns 0.
-//            minStack.getMin();   --> Returns -2.
+    fun backspaceCompare(s: String = "a##c", t: String = "#a#c") {
+        println(BackSpaceCompare().backspaceCompare(s, t))
+    }
 
-//    val minStack = MinStack()
-//    minStack.push(-2)
-//    minStack.push(0)
-//    minStack.push(-3)
-//    println(minStack.getMin())
-//    minStack.pop()
-//    println(minStack.top())
-//    println(minStack.getMin())
+    fun minStack() {
+        /**
+         *  MinStack minStack = new MinStack();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        minStack.getMin();   --> Returns -3.
+        minStack.pop();
+        minStack.top();      --> Returns 0.
+        minStack.getMin();   --> Returns -2.
+         **/
 
-//    val tree = TreeNode(1).apply {
-//        left = TreeNode(2).apply {
-//            left = TreeNode(4)
-//            right = TreeNode(5)
-//        }
-//        right = TreeNode(3)
-//    }
-//    println(Solution().diameterOfBinaryTree(tree))
+        val minStack = MinStack()
+        minStack.push(-2)
+        minStack.push(0)
+        minStack.push(-3)
+        println(minStack.getMin())
+        minStack.pop()
+        println(minStack.top())
+        println(minStack.getMin())
+    }
+
+    fun diameterOfBinaryTree() {
+        val tree = TreeNode(1).apply {
+            left = TreeNode(2).apply {
+                left = TreeNode(4)
+                right = TreeNode(5)
+            }
+            right = TreeNode(3)
+        }
+
+        println(DiameterOfBinaryTree().diameterOfBinaryTree(tree))
+    }
+
+    fun lastStoneWeight(stones: IntArray = intArrayOf(2, 7, 4, 1, 8, 1)) {
+        println(LastStoneWeight().lastStoneWeight(stones))
+    }
 }

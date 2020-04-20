@@ -50,8 +50,8 @@ class MiddleNode {
             findMaxNode(head.next, ++c)
         }
     }
+}
 
-    inner class ListNode(val v: Int) {
-        var next: ListNode? = null
-    }
+class ListNode(val v: Int) {
+    var next: ListNode? = null
 }

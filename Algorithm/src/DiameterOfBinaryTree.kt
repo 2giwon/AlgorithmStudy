@@ -27,8 +27,10 @@ class DiameterOfBinaryTree {
         return max(left, right) + 1
     }
 
-    inner class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-    }
+
+}
+
+class TreeNode(var `val`: Int) {
+    var left: TreeNode? = null
+    var right: TreeNode? = null
 }
