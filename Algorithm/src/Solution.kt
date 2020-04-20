@@ -93,10 +93,10 @@ object Solution {
     // 2, 2
     // 1
     fun lastStoneWeight(stones: IntArray = intArrayOf(4, 6, 4, 10)) {
-        println(LastStoneWeight().lastStoneWeight(stones))
-        println(LastStoneWeight().lastStoneWeight(intArrayOf(2, 7, 4, 1, 8, 1)))
-        println(LastStoneWeight().lastStoneWeight(intArrayOf(2, 2)))
-        println(LastStoneWeight().lastStoneWeight(intArrayOf(1)))
+        println(LastStoneWeight().lastStoneWeight2(stones))
+        println(LastStoneWeight().lastStoneWeight2(intArrayOf(2, 7, 4, 1, 8, 1)))
+        println(LastStoneWeight().lastStoneWeight2(intArrayOf(2, 2)))
+        println(LastStoneWeight().lastStoneWeight2(intArrayOf(1)))
 
     }
 }
