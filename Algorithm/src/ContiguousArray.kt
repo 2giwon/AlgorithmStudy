@@ -1,3 +1,5 @@
+import kotlin.math.max
+
 class ContiguousArray {
     fun findMaxLength(nums: IntArray): Int {
         val map = HashMap<Int, Int>()
@@ -12,7 +14,7 @@ class ContiguousArray {
             }
 
             if (acc in map) {
-                max = Math.max(max, idx - map[acc]!!)
+                max = max(max, idx - map[acc]!!)
             } else {
                 map[acc] = idx
             }

@@ -99,7 +99,19 @@ object Solution {
         println(LastStoneWeight().lastStoneWeight2(intArrayOf(1)))
     }
 
-    fun findMaxLength(nums: IntArray = intArrayOf(0, 0, 0, 1, 1, 1, 0)) {
-        println(ContiguousArray().findMaxLength(nums))
+    fun findMaxLength(nums: IntArray = intArrayOf(1, 1, 1, 0, 1, 0, 1, 0, 1, 1)) {
+//        println(ContiguousArray().findMaxLength(nums))
+    }
+
+    fun isNumber(s: String = "a234") {
+        println(ProgrammersSkilLevelOne().isNumber(s))
+    }
+
+    fun isHasyadNumber(x: Int = 11) {
+        println(ProgrammersSkilLevelOne().isHarshadNumber(x))
+    }
+
+    fun sumFactor(n: Int = 12) {
+        println(ProgrammersSkilLevelOne().sumFactor(n))
     }
 }
