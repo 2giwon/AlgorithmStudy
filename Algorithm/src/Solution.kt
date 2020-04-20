@@ -99,7 +99,7 @@ object Solution {
         println(LastStoneWeight().lastStoneWeight2(intArrayOf(1)))
     }
 
-    fun findMaxLength(nums: IntArray = intArrayOf(0, 1)) {
+    fun findMaxLength(nums: IntArray = intArrayOf(0, 0, 0, 1, 1, 1, 0)) {
         println(ContiguousArray().findMaxLength(nums))
     }
 }
