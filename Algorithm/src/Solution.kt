@@ -114,4 +114,15 @@ object Solution {
     fun sumFactor(n: Int = 12) {
         println(ProgrammersSkilLevelOne().sumFactor(n))
     }
+
+    fun stringShift(s: String = "abcdefg", shift: Array<IntArray> =
+            arrayOf(
+                    intArrayOf(1, 1),
+                    intArrayOf(1, 1),
+                    intArrayOf(0, 2),
+                    intArrayOf(1, 3)
+            )
+    ) {
+        println(PerformStringShifts().stringShift(s, shift))
+    }
 }
