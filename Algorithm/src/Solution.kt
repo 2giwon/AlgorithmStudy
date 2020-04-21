@@ -1,4 +1,12 @@
 object Solution {
+    private fun solution(vararg func: () -> Any) {
+        listOf(*func).forEach { it() }
+    }
+
+    fun solution() {
+        solution(::productExceptSelf)
+    }
+
     fun maxSubArray(array: IntArray = intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4)) {
         println(MaxSubArray().maxSubArray(array))
     }
@@ -100,7 +108,7 @@ object Solution {
     }
 
     fun findMaxLength(nums: IntArray = intArrayOf(1, 1, 1, 0, 1, 0, 1, 0, 1, 1)) {
-//        println(ContiguousArray().findMaxLength(nums))
+        println(ContiguousArray().findMaxLength(nums))
     }
 
     fun isNumber(s: String = "a234") {
@@ -126,7 +134,7 @@ object Solution {
         println(PerformStringShifts().stringShift(s, shift))
     }
 
-    fun productExceptSelf(nums: IntArray = intArrayOf(1, 2, 3, 4)) {
-        println(ProductofArrayExceptSelf().productExceptSelf(nums))
+    private fun productExceptSelf() {
+        println(ProductofArrayExceptSelf().productExceptSelf(intArrayOf(1, 2, 3, 4)).toList())
     }
 }
