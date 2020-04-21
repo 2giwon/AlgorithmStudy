@@ -125,4 +125,8 @@ object Solution {
     ) {
         println(PerformStringShifts().stringShift(s, shift))
     }
+
+    fun productExceptSelf(nums: IntArray = intArrayOf(1, 2, 3, 4)) {
+        println(ProductofArrayExceptSelf().productExceptSelf(nums))
+    }
 }
