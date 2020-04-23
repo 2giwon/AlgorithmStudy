@@ -143,5 +143,9 @@ object Solution {
 
     private fun checkValidString() {
         println(ValidParenthesisString().checkValidString("()"))
+        println(ValidParenthesisString().checkValidString("(*)"))
+        println(ValidParenthesisString().checkValidString("(*))"))
+        println(ValidParenthesisString().checkValidString("((*)))"))
+
     }
 }
