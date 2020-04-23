@@ -4,7 +4,10 @@ object Solution {
     }
 
     fun solution() {
-        solution(::productExceptSelf)
+        solution(
+                ::productExceptSelf,
+                ::checkValidString
+        )
     }
 
     fun maxSubArray(array: IntArray = intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4)) {
@@ -136,5 +139,9 @@ object Solution {
 
     private fun productExceptSelf() {
         println(ProductofArrayExceptSelf().productExceptSelf(intArrayOf(1, 2, 3, 4)).toList())
+    }
+
+    private fun checkValidString() {
+        println(ValidParenthesisString().checkValidString("()"))
     }
 }
