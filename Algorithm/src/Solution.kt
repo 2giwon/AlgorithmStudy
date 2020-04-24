@@ -146,6 +146,25 @@ object Solution {
         println(ValidParenthesisString().checkValidString("(*)"))
         println(ValidParenthesisString().checkValidString("(*))"))
         println(ValidParenthesisString().checkValidString("((*)))"))
+    }
 
+    private fun numIslands(grid: Array<CharArray>) {
+        println(NumberOfIslands().numIslands(
+                arrayOf(
+                        charArrayOf('1', '1', '1', '1', '0'),
+                        charArrayOf('1', '1', '0', '1', '0'),
+                        charArrayOf('1', '1', '0', '0', '0'),
+                        charArrayOf('0', '0', '0', '0', '0')
+                )
+        ))
+
+        println(NumberOfIslands().numIslands(
+                arrayOf(
+                        charArrayOf('1', '1', '0', '0', '0'),
+                        charArrayOf('1', '1', '0', '0', '0'),
+                        charArrayOf('0', '0', '1', '0', '0'),
+                        charArrayOf('0', '0', '0', '1', '1')
+                )
+        ))
     }
 }
