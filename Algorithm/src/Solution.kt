@@ -5,8 +5,9 @@ object Solution {
 
     fun solution() {
         solution(
-                ::productExceptSelf,
-                ::checkValidString
+//                ::productExceptSelf,
+//                ::checkValidString
+                ::numIslands
         )
     }
 
@@ -148,7 +149,7 @@ object Solution {
         println(ValidParenthesisString().checkValidString("((*)))"))
     }
 
-    private fun numIslands(grid: Array<CharArray>) {
+    private fun numIslands() {
         println(NumberOfIslands().numIslands(
                 arrayOf(
                         charArrayOf('1', '1', '1', '1', '0'),
