@@ -7,7 +7,8 @@ object Solution {
         solution(
 //                ::productExceptSelf,
 //                ::checkValidString
-                ::numIslands
+                ::numIslands,
+                ::minPathSum
         )
     }
 
@@ -165,6 +166,16 @@ object Solution {
                         charArrayOf('1', '1', '0', '0', '0'),
                         charArrayOf('0', '0', '1', '0', '0'),
                         charArrayOf('0', '0', '0', '1', '1')
+                )
+        ))
+    }
+
+    private fun minPathSum() {
+        println(MinimumPathSum().minPathSum(
+                arrayOf(
+                        intArrayOf(1, 3, 1),
+                        intArrayOf(1, 5, 1),
+                        intArrayOf(4, 2, 1)
                 )
         ))
     }
