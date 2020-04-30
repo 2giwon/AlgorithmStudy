@@ -1,44 +1,27 @@
-import java.util.*
-
 class NumberOfIslands {
     fun numIslands(grid: Array<CharArray>): Int {
+        if (grid.isEmpty()) return 0
         var result = 0
 
-        (grid.indices).forEach { x ->
-            (grid[0].indices).forEach { y ->
-                if (grid[x][y] == '1') {
-                    bfs(grid, intArrayOf(x, y))
-                    result++
+        grid.forEachIndexed { i, it ->
+            it.forEachIndexed { j, _ ->
+                if (grid[i][j] == '1') {
+                    result += dfs(grid, i, j)
                 }
             }
         }
-
         return result
     }
 
-    private fun bfs(grid: Array<CharArray>, start: IntArray) {
-        val queue = LinkedList<IntArray>()
-        queue.offer(start)
-        grid[start[0]][start[1]] = '0'
-
-        while (!queue.isEmpty()) {
-            val current = queue.poll()
-            val x = current[0]
-            val y = current[1]
-
-            val top = intArrayOf(x - 1, y)
-            val bottom = intArrayOf(x + 1, y)
-            val left = intArrayOf(x, y - 1)
-            val right = intArrayOf(x, y + 1)
-
-            for (point in listOf(top, bottom, left, right)) {
-                if (!isIsland(grid, point)) continue
-                queue.offer(point)
-                grid[point[0]][point[1]] = '0'
-            }
+    private fun dfs(grid: Array<CharArray>, i: Int, j: Int): Int {
+        if (i < 0 || j < 0 || i >= grid.size || j >= grid[0].size || grid[i][j] == '0') {
+            return 0
         }
+        grid[i][j] = '0'
+        dfs(grid, i + 1, j)
+        dfs(grid, i - 1, j)
+        dfs(grid, i, j - 1)
+        dfs(grid, i, j + 1)
+        return 1
     }
-
-    private fun isIsland(grid: Array<CharArray>, point: IntArray) =
-            point[0] >= 0 && point[1] >= 0 && point[0] < grid.size && point[1] < grid[0].size && grid[point[0]][point[1]] == '1'
 }

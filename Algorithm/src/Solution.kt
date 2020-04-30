@@ -171,11 +171,25 @@ object Solution {
     }
 
     private fun minPathSum() {
+//        println(MinimumPathSum().minPathSum(
+//                arrayOf(
+//                        intArrayOf(1, 3, 1),
+//                        intArrayOf(1, 5, 1),
+//                        intArrayOf(4, 2, 1)
+//                )
+//        ))
+//
+//        println(MinimumPathSum().minPathSum(
+//                arrayOf(
+//                        intArrayOf(1, 2),
+//                        intArrayOf(1, 1)
+//                )
+//        ))
+
         println(MinimumPathSum().minPathSum(
                 arrayOf(
-                        intArrayOf(1, 3, 1),
-                        intArrayOf(1, 5, 1),
-                        intArrayOf(4, 2, 1)
+                        intArrayOf(1, 2, 5),
+                        intArrayOf(3, 2, 1)
                 )
         ))
     }
