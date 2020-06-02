@@ -10,10 +10,12 @@ class InvertTree {
      * }
      */
     fun invertTree(root: TreeNode?): TreeNode? {
-        var ti = root
-        var v = ti?.`val`
+        if (root == null) return root
+        val temp = invertTree(root.left)
+        root.left = invertTree(root.right)
+        root.right = temp
 
-        return ti
+        return root
     }
 
 

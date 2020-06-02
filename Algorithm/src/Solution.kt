@@ -196,6 +196,17 @@ object Solution {
     }
 
     private fun invertTree() {
-        println(InvertTree().invertTree(TreeNode(5)))
+        val tree = TreeNode(4).apply {
+            left = TreeNode(2).apply {
+                left = TreeNode(1)
+                right = TreeNode(3)
+            }
+            right = TreeNode(7).apply {
+                left = TreeNode(6)
+                right = TreeNode(9)
+            }
+        }
+
+        println(InvertTree().invertTree(tree))
     }
 }
