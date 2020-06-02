@@ -8,7 +8,8 @@ object Solution {
 //                ::productExceptSelf,
 //                ::checkValidString
                 ::numIslands,
-                ::minPathSum
+                ::minPathSum,
+                ::invertTree
         )
     }
 
@@ -192,5 +193,9 @@ object Solution {
                         intArrayOf(3, 2, 1)
                 )
         ))
+    }
+
+    private fun invertTree() {
+        println(InvertTree().invertTree(TreeNode(5)))
     }
 }
