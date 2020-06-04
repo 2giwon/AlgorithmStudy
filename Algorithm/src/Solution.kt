@@ -223,10 +223,17 @@ object Solution {
     private fun twoCitySchedCost() {
         println(TwoCityScheduling().twoCitySchedCost(
                 arrayOf(
-                        intArrayOf(10, 20),
-                        intArrayOf(30, 200),
-                        intArrayOf(400, 50),
-                        intArrayOf(30, 20)
+//                        intArrayOf(10, 20),
+//                        intArrayOf(30, 200),
+//                        intArrayOf(400, 50),
+//                        intArrayOf(30, 20)
+
+                        intArrayOf(259, 770),
+                        intArrayOf(448, 54),
+                        intArrayOf(926, 667),
+                        intArrayOf(184, 139),
+                        intArrayOf(840, 118),
+                        intArrayOf(577, 469)
                 )
         )
         )
