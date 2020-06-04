@@ -9,7 +9,8 @@ object Solution {
 //                ::checkValidString
                 ::numIslands,
                 ::minPathSum,
-                ::invertTree
+                ::invertTree,
+                ::deleteNodeInALinkedList
         )
     }
 
@@ -208,5 +209,13 @@ object Solution {
         }
 
         println(InvertTree().invertTree(tree))
+    }
+
+    private fun deleteNodeInALinkedList() {
+
+        println(DeleteNodeInALinkedList().apply {
+            deleteNode(ListNode(5))
+        }.linkedList)
+
     }
 }

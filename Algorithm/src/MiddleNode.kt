@@ -51,7 +51,3 @@ class MiddleNode {
         }
     }
 }
-
-class ListNode(val v: Int) {
-    var next: ListNode? = null
-}
