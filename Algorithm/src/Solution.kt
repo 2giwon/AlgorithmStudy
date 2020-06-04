@@ -10,7 +10,8 @@ object Solution {
                 ::numIslands,
                 ::minPathSum,
                 ::invertTree,
-                ::deleteNodeInALinkedList
+                ::deleteNodeInALinkedList,
+                ::twoCitySchedCost
         )
     }
 
@@ -217,5 +218,17 @@ object Solution {
             deleteNode(ListNode(5))
         }.linkedList)
 
+    }
+
+    private fun twoCitySchedCost() {
+        println(TwoCityScheduling().twoCitySchedCost(
+                arrayOf(
+                        intArrayOf(10, 20),
+                        intArrayOf(30, 200),
+                        intArrayOf(400, 50),
+                        intArrayOf(30, 20)
+                )
+        )
+        )
     }
 }
