@@ -11,7 +11,8 @@ object Solution {
                 ::minPathSum,
                 ::invertTree,
                 ::deleteNodeInALinkedList,
-                ::twoCitySchedCost
+                ::twoCitySchedCost,
+                ::reserveString
         )
     }
 
@@ -237,5 +238,9 @@ object Solution {
                 )
         )
         )
+    }
+
+    private fun reserveString() {
+        println(ReserveString().reserveString("hello".toCharArray()))
     }
 }
