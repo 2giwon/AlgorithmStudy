@@ -12,7 +12,8 @@ object Solution {
                 ::invertTree,
                 ::deleteNodeInALinkedList,
                 ::twoCitySchedCost,
-                ::reserveString
+                ::reserveString,
+                ::randomPickWithWeight
         )
     }
 
@@ -242,5 +243,9 @@ object Solution {
 
     private fun reserveString() {
         println(ReserveString().reserveString("hello".toCharArray()))
+    }
+
+    private fun randomPickWithWeight() {
+        println(RandomPickWIthWeight(intArrayOf(1)))
     }
 }
