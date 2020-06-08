@@ -7,13 +7,14 @@ object Solution {
         solution(
 //                ::productExceptSelf,
 //                ::checkValidString
-                ::numIslands,
-                ::minPathSum,
-                ::invertTree,
-                ::deleteNodeInALinkedList,
-                ::twoCitySchedCost,
-                ::reserveString,
-                ::randomPickWithWeight
+//                ::numIslands,
+//                ::minPathSum,
+//                ::invertTree,
+//                ::deleteNodeInALinkedList,
+//                ::twoCitySchedCost,
+//                ::reserveString,
+//                ::randomPickWithWeight,
+                ::reconstructionQueue
         )
     }
 
@@ -247,5 +248,20 @@ object Solution {
 
     private fun randomPickWithWeight() {
         println(RandomPickWIthWeight(intArrayOf(1)))
+    }
+
+    private fun reconstructionQueue() {
+        val peoples = arrayOf(
+                intArrayOf(7, 0),
+                intArrayOf(4, 4),
+                intArrayOf(7, 1),
+                intArrayOf(5, 0),
+                intArrayOf(6, 1),
+                intArrayOf(5, 2)
+        )
+        val result = QueueReconstructionByHeight().reconstructionQueue(peoples)
+        result.forEach { print(it.toList()) }
+
+        println()
     }
 }
