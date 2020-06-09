@@ -14,7 +14,8 @@ object Solution {
 //                ::twoCitySchedCost,
 //                ::reserveString,
 //                ::randomPickWithWeight,
-                ::reconstructionQueue
+                ::reconstructionQueue,
+                ::coinChange
         )
     }
 
@@ -263,5 +264,9 @@ object Solution {
         result.forEach { print(it.toList()) }
 
         println()
+    }
+
+    private fun coinChange() {
+        println(CoinChange().change(5, intArrayOf(1, 2, 5)))
     }
 }
