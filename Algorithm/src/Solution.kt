@@ -15,7 +15,8 @@ object Solution {
 //                ::reserveString,
 //                ::randomPickWithWeight,
                 ::reconstructionQueue,
-                ::coinChange
+                ::coinChange,
+                ::powerOfTwo
         )
     }
 
@@ -268,5 +269,11 @@ object Solution {
 
     private fun coinChange() {
         println(CoinChange().change(5, intArrayOf(1, 2, 5)))
+    }
+
+    private fun powerOfTwo() {
+        println(PowerOfTwo().isPowerOfTwo(218))
+        println(PowerOfTwo().isPowerOfTwo(1))
+        println(PowerOfTwo().isPowerOfTwo(16))
     }
 }
