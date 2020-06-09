@@ -14,9 +14,10 @@ object Solution {
 //                ::twoCitySchedCost,
 //                ::reserveString,
 //                ::randomPickWithWeight,
-                ::reconstructionQueue,
-                ::coinChange,
-                ::powerOfTwo
+//                ::reconstructionQueue,
+//                ::coinChange,
+//                ::powerOfTwo,
+
         )
     }
 
@@ -276,4 +277,5 @@ object Solution {
         println(PowerOfTwo().isPowerOfTwo(1))
         println(PowerOfTwo().isPowerOfTwo(16))
     }
+
 }
