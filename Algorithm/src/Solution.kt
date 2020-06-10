@@ -17,6 +17,7 @@ object Solution {
 //                ::reconstructionQueue,
 //                ::coinChange,
 //                ::powerOfTwo,
+                ::isSubSequence
 
         )
     }
@@ -276,6 +277,10 @@ object Solution {
         println(PowerOfTwo().isPowerOfTwo(218))
         println(PowerOfTwo().isPowerOfTwo(1))
         println(PowerOfTwo().isPowerOfTwo(16))
+    }
+
+    private fun isSubSequence() {
+        println(SubSequence().isSubsequence("abc", "ahbgdc"))
     }
 
 }
