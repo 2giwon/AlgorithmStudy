@@ -281,6 +281,9 @@ object Solution {
 
     private fun isSubSequence() {
         println(SubSequence().isSubsequence("abc", "ahbgdc"))
+        println(SubSequence().isSubsequence("axc", "ahbgdc"))
+        println(SubSequence().isSubsequence("ace", "abcde"))
+        println(SubSequence().isSubsequence("aec", "abcde"))
     }
 
 }
