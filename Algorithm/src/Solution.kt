@@ -1,3 +1,11 @@
+import leetcode.MaxSubArray
+import leetcode.SingleNumber
+import leetcode.challenge.april.*
+import leetcode.challenge.june.*
+import programmers.ProgrammersSkilLevelOne
+import util.ListNode
+import util.TreeNode
+
 object Solution {
     private fun solution(vararg func: () -> Any) {
         listOf(*func).forEach { it() }
@@ -79,7 +87,7 @@ object Solution {
 
     fun minStack() {
         /**
-         *  MinStack minStack = new MinStack();
+         *  leetcode.challenge.april.MinStack minStack = new leetcode.challenge.april.MinStack();
         minStack.push(-2);
         minStack.push(0);
         minStack.push(-3);
@@ -181,7 +189,7 @@ object Solution {
     }
 
     private fun minPathSum() {
-//        println(MinimumPathSum().minPathSum(
+//        println(leetcode.challenge.april.MinimumPathSum().minPathSum(
 //                arrayOf(
 //                        intArrayOf(1, 3, 1),
 //                        intArrayOf(1, 5, 1),
@@ -189,7 +197,7 @@ object Solution {
 //                )
 //        ))
 //
-//        println(MinimumPathSum().minPathSum(
+//        println(leetcode.challenge.april.MinimumPathSum().minPathSum(
 //                arrayOf(
 //                        intArrayOf(1, 2),
 //                        intArrayOf(1, 1)
