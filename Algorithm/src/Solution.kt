@@ -297,5 +297,8 @@ object Solution {
 
     private fun searchInsert() {
         println(SearchInsertPosition().searchInsert(intArrayOf(1, 3, 5, 6), 5))
+        println(SearchInsertPosition().searchInsert(intArrayOf(1, 3, 5, 6), 2))
+        println(SearchInsertPosition().searchInsert(intArrayOf(1, 3, 5, 6), 7))
+        println(SearchInsertPosition().searchInsert(intArrayOf(1, 3, 5, 6), 0))
     }
 }
