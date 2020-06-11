@@ -25,7 +25,8 @@ object Solution {
 //                ::reconstructionQueue,
 //                ::coinChange,
 //                ::powerOfTwo,
-                ::isSubSequence
+//                ::isSubSequence,
+                ::searchInsert
 
         )
     }
@@ -294,4 +295,7 @@ object Solution {
         println(SubSequence().isSubsequence("aec", "abcde"))
     }
 
+    private fun searchInsert() {
+        println(SearchInsertPosition().searchInsert(intArrayOf(1, 3, 5, 6), 5))
+    }
 }
