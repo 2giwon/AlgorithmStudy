@@ -26,7 +26,8 @@ object Solution {
 //                ::coinChange,
 //                ::powerOfTwo,
 //                ::isSubSequence,
-                ::searchInsert
+//                ::searchInsert,
+                ::sortColors
 
         )
     }
@@ -300,5 +301,9 @@ object Solution {
         println(SearchInsertPosition().searchInsert(intArrayOf(1, 3, 5, 6), 2))
         println(SearchInsertPosition().searchInsert(intArrayOf(1, 3, 5, 6), 7))
         println(SearchInsertPosition().searchInsert(intArrayOf(1, 3, 5, 6), 0))
+    }
+
+    private fun sortColors() {
+        println(SortColors().sortColors(intArrayOf(2, 0, 2, 1, 1, 0)).toList())
     }
 }
