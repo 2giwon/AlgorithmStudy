@@ -29,8 +29,8 @@ object Solution {
 //                ::searchInsert,
 //                ::sortColors,
 //                ::randomizedSet,
-                ::largestDivisibleSubset
-
+//                ::largestDivisibleSubset,
+                ::findCheapestPrice
         )
     }
 
@@ -363,5 +363,64 @@ object Solution {
                 959, 299, 915, 761, 313, 845, 712, 330, 253, 573, 18, 138, 317, 56, 691, 349, 605, 463, 652, 781, 992, 422, 32, 664, 711, 284, 741,
                 289, 57, 697, 368, 583, 943, 40, 298, 430, 851, 913, 745, 65, 179, 705, 630, 401, 674, 465, 487, 878, 477, 240, 35, 572, 838, 968, 678,
                 342, 775, 30, 806, 680, 969, 2, 241, 909, 803, 979, 460, 518, 156, 85, 643, 850, 597, 843, 89)))
+    }
+
+    private fun findCheapestPrice() {
+//        println(CheapestFlightsWithinKStops().findCheapestPrice(
+//                3, arrayOf(intArrayOf(0, 1, 100), intArrayOf(1, 2, 100), intArrayOf(0, 2, 500)), 0, 2, 1)
+//        )
+//        println(CheapestFlightsWithinKStops().findCheapestPrice(
+//                3, arrayOf(intArrayOf(0, 1, 100), intArrayOf(1, 2, 100), intArrayOf(0, 2, 500)), 0, 2, 0)
+//        )
+//        println(CheapestFlightsWithinKStops().findCheapestPrice(
+//                5,
+//                arrayOf(
+//                        intArrayOf(1, 2, 10),
+//                        intArrayOf(2, 0, 7),
+//                        intArrayOf(1, 3, 8),
+//                        intArrayOf(4, 0, 10),
+//                        intArrayOf(3, 4, 2),
+//                        intArrayOf(4, 2, 10),
+//                        intArrayOf(0, 3, 3),
+//                        intArrayOf(3, 1, 6),
+//                        intArrayOf(2, 4, 5)
+//                ),
+//                0,
+//                4,
+//                1)
+//        )
+        println(CheapestFlightsWithinKStops().findCheapestPrice(
+                10,
+                arrayOf(
+                        intArrayOf(3, 4, 4),
+                        intArrayOf(2, 5, 6),
+                        intArrayOf(4, 7, 10),
+                        intArrayOf(9, 6, 5),
+                        intArrayOf(7, 4, 4),
+                        intArrayOf(6, 2, 10),
+                        intArrayOf(6, 8, 6),
+                        intArrayOf(7, 9, 4),
+                        intArrayOf(1, 5, 4),
+                        intArrayOf(1, 0, 4),
+                        intArrayOf(9, 7, 3),
+                        intArrayOf(7, 0, 5),
+                        intArrayOf(6, 5, 8),
+                        intArrayOf(1, 7, 6),
+                        intArrayOf(4, 0, 9),
+                        intArrayOf(5, 9, 1),
+                        intArrayOf(8, 7, 3),
+                        intArrayOf(1, 2, 6),
+                        intArrayOf(4, 1, 5),
+                        intArrayOf(5, 2, 4),
+                        intArrayOf(1, 9, 1),
+                        intArrayOf(7, 8, 10),
+                        intArrayOf(0, 4, 2),
+                        intArrayOf(7, 2, 8)
+                ),
+                6,
+                0,
+                7
+        ))
+
     }
 }
