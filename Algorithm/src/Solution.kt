@@ -421,6 +421,9 @@ object Solution {
                 0,
                 7
         ))
+    }
+
+    private fun searchBinaryTree() {
 
     }
 }
