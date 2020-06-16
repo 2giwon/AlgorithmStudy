@@ -30,7 +30,8 @@ object Solution {
 //                ::sortColors,
 //                ::randomizedSet,
 //                ::largestDivisibleSubset,
-                ::findCheapestPrice
+//                ::findCheapestPrice,
+                ::searchBinaryTree
         )
     }
 
@@ -424,6 +425,13 @@ object Solution {
     }
 
     private fun searchBinaryTree() {
-
+        val tree = TreeNode(4).apply {
+            left = TreeNode(2).apply {
+                left = TreeNode(1)
+                right = TreeNode(3)
+            }
+            right = TreeNode(7)
+        }
+        println(SearchBinaryTree().searchBST(tree, 2))
     }
 }
