@@ -444,6 +444,30 @@ object Solution {
     }
 
     private fun solve() {
-        println()
+        val charArray = arrayOf(
+                charArrayOf('X', 'X', 'X', 'X'),
+                charArrayOf('X', 'O', 'O', 'X'),
+                charArrayOf('X', 'X', 'O', 'X'),
+                charArrayOf('X', 'O', 'X', 'X')
+        )
+
+        val c2 = arrayOf(
+                charArrayOf('O', 'X', 'X', 'O', 'X'),
+                charArrayOf('X', 'O', 'O', 'X', 'O'),
+                charArrayOf('X', 'O', 'X', 'O', 'X'),
+                charArrayOf('O', 'X', 'O', 'O', 'O'),
+                charArrayOf('X', 'X', 'O', 'X', 'O')
+        )
+        val c3 = arrayOf(
+                charArrayOf('X', 'X', 'X', 'X', 'X'),
+                charArrayOf('X', 'O', 'O', 'O', 'X'),
+                charArrayOf('X', 'X', 'O', 'O', 'X'),
+                charArrayOf('X', 'X', 'X', 'O', 'X'),
+                charArrayOf('X', 'O', 'X', 'X', 'X')
+        )
+
+//        println(SurroundedRegions().solve(charArray))
+        println(SurroundedRegions().solve(c2))
+        println(SurroundedRegions().solve(c3))
     }
 }
