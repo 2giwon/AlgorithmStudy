@@ -33,7 +33,8 @@ object Solution {
 //                ::findCheapestPrice,
 //                ::searchBinaryTree,
 //                ::validateIpAddress,
-                ::solve
+//                ::solve,
+                ::hIndex
         )
     }
 
@@ -477,6 +478,6 @@ object Solution {
     }
 
     private fun hIndex() {
-
+        println(HIndex().hIndex(intArrayOf(0, 1, 3, 5, 6)))
     }
 }
