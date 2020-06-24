@@ -475,4 +475,8 @@ object Solution {
         println(SurroundedRegions().solve(c2))
         println(SurroundedRegions().solve(c3))
     }
+
+    private fun hIndex() {
+
+    }
 }
