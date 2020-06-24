@@ -34,7 +34,8 @@ object Solution {
 //                ::searchBinaryTree,
 //                ::validateIpAddress,
 //                ::solve,
-                ::hIndex
+//                ::hIndex,
+                ::longestDupSubstring
         )
     }
 
@@ -479,5 +480,10 @@ object Solution {
 
     private fun hIndex() {
         println(HIndex().hIndex(intArrayOf(0, 1, 3, 5, 6)))
+    }
+
+    private fun longestDupSubstring() {
+        println(LongestDuplicateSubstring().longestDupSubstring("banana"))
+        println(LongestDuplicateSubstring().longestDupSubstring("abcd"))
     }
 }
