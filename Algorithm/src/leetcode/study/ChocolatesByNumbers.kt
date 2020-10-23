@@ -2,16 +2,12 @@ package leetcode.study
 
 class ChocolatesByNumbers {
     fun solution(N: Int, M: Int): Int {
-        val result = mutableListOf<Int>()
-        var start = 0
-        while (true) {
-            val chocolateNumber: Int = (start + M) % N
-            if (chocolateNumber == 0) break
-            result.add(chocolateNumber)
-
-            start = chocolateNumber
+        tailrec fun solution(a: Int, b: Int): Int {
+            if (b == 0) return N / a
+            return solution(b, a % b)
         }
 
-        return result.size
+        return solution(N, M)
+
     }
 }
