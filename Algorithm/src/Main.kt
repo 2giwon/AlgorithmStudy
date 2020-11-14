@@ -1,17 +1,9 @@
-import leetcode.study.RecoverTree
-import leetcode.study.TreeNode
+import leetcode.study.FindSmallestDivisorThreshold
 
 fun main(args: Array<String>) {
-    println(RecoverTree().recoverTree(TreeNode(1).apply {
-        left = TreeNode(3).apply {
-            right = TreeNode(2)
-        }
-    }))
-
-    println(RecoverTree().recoverTree(TreeNode(3).apply {
-        left = TreeNode(1)
-        right = TreeNode(4).apply {
-            right = TreeNode(2)
-        }
-    }))
+    println(FindSmallestDivisorThreshold().smallestDivisor(intArrayOf(1, 2, 5, 9), 6))
+    println(FindSmallestDivisorThreshold().smallestDivisor(intArrayOf(2, 3, 5, 7, 11), 11))
+    println(FindSmallestDivisorThreshold().smallestDivisor(intArrayOf(19), 5))
+    println(FindSmallestDivisorThreshold().smallestDivisor(intArrayOf(962551, 933661, 905225, 923035, 990560), 10))
+    println(FindSmallestDivisorThreshold().smallestDivisor(intArrayOf(2, 2, 2, 2), 4))
 }
