@@ -1,9 +1,8 @@
-import leetcode.study.FindSmallestDivisorThreshold
+import leetcode.study.Permutations
 
 fun main(args: Array<String>) {
-    println(FindSmallestDivisorThreshold().smallestDivisor(intArrayOf(1, 2, 5, 9), 6))
-    println(FindSmallestDivisorThreshold().smallestDivisor(intArrayOf(2, 3, 5, 7, 11), 11))
-    println(FindSmallestDivisorThreshold().smallestDivisor(intArrayOf(19), 5))
-    println(FindSmallestDivisorThreshold().smallestDivisor(intArrayOf(962551, 933661, 905225, 923035, 990560), 10))
-    println(FindSmallestDivisorThreshold().smallestDivisor(intArrayOf(2, 2, 2, 2), 4))
+//    println(Permutations().permuteUnique(intArrayOf(1, 1, 2)))
+//    println(Permutations().permuteUnique(intArrayOf(1, 2, 3)))
+//    println(Permutations().permuteUnique(intArrayOf(1)))
+    println(Permutations().permuteUnique(intArrayOf(0, 1, 0, 0, 9)))
 }
