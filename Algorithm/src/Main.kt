@@ -1,8 +1,25 @@
-import leetcode.study.Permutations
+import leetcode.study.RangeSumBST
+import leetcode.study.TreeNode
 
 fun main(args: Array<String>) {
-    println(Permutations().permuteUnique(intArrayOf(1, 1, 2)))
-//    println(Permutations().permuteUnique(intArrayOf(1, 2, 3)))
-//    println(Permutations().permuteUnique(intArrayOf(1)))
-    println(Permutations().permuteUnique(intArrayOf(0, 1, 0, 0, 9)))
+    println(RangeSumBST().rangeSumBST(TreeNode(10).apply {
+        left = TreeNode(5).apply {
+            left = TreeNode(3)
+            right = TreeNode(7)
+        }
+        right = TreeNode(15).apply {
+            right = TreeNode(18)
+        }
+    }, 7, 15))
+
+    println(RangeSumBST().rangeSumBST(TreeNode(10).apply {
+        left = TreeNode(5).apply {
+            left = TreeNode(3).apply { left = TreeNode(1) }
+            right = TreeNode(7).apply { left = TreeNode(6) }
+        }
+        right = TreeNode(15).apply {
+            left = TreeNode(13)
+            right = TreeNode(18)
+        }
+    }, 6, 10))
 }
