@@ -1,9 +1,11 @@
 package programmers
 
-import programmers.coding.Solution
-
 fun main() {
-    Solution::class.java.declaredMethods.forEach {
-        it.invoke(Solution())
-    }
+//    println(Solution().solution(6, "hi bye", 1))
+//    println(Solution().solution(6, "hi bye", 2))
+//    println(Solution().solution(6, "hi bye", 6))
+//    println(Solution().solution(6, "hi bye", 12))
+    println(Solution().solution(6, "hi bye", 13))
+    println(Solution().solution(6, "hi bye", 16))
+    println(Solution().solution(10, "   hi te xtt ext text text   ", 119))
 }
