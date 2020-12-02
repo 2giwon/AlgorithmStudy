@@ -1,6 +1,6 @@
 package programmers
 
-class Coupang {
+class Solution {
     fun solution(n: Int, text: String, second: Int): String {
         val textList = text.toMutableList()
         val answer = StringBuilder()
