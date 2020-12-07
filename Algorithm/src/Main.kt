@@ -1,4 +1,5 @@
-import leetcode.study.DecodeString
+import leetcode.challenge.december.IncreasingBST
+import leetcode.study.TreeNode
 
 fun main(args: Array<String>) {
 //    println(RangeSumBST().rangeSumBST(TreeNode(10).apply {
@@ -30,15 +31,33 @@ fun main(args: Array<String>) {
 //        }
 //    }))
 //
-//    println(MaxDepthBinaryTree().maxDepth(TreeNode(1).apply {
-//        right = TreeNode(2)
-//    }))
+    println(IncreasingBST().increasingBST(TreeNode(5).apply {
+        left = TreeNode(1)
+        right = TreeNode(7)
+    }))
+
+    println(IncreasingBST().increasingBST(TreeNode(5).apply {
+        left = TreeNode(3).apply {
+            left = TreeNode(2).apply {
+                left = TreeNode(1)
+            }
+            right = TreeNode(4)
+        }
+        right = TreeNode(6).apply {
+            right = TreeNode(8).apply {
+                left = TreeNode(7)
+                right = TreeNode(9)
+            }
+        }
+    }))
+
+
 
 //    println(MaxDepthBinaryTree().maxDepth(null))
 //    println(MaxDepthBinaryTree().maxDepth(TreeNode(0)))
 
-    println(DecodeString().decodeString("3[a]2[bc]"))
-    println(DecodeString().decodeString("3[a2[c]]"))
-    println(DecodeString().decodeString("2[abc]3[cd]ef"))
-    println(DecodeString().decodeString("abc3[cd]xyz"))
+//    println(DecodeString().decodeString("3[a]2[bc]"))
+//    println(DecodeString().decodeString("3[a2[c]]"))
+//    println(DecodeString().decodeString("2[abc]3[cd]ef"))
+//    println(DecodeString().decodeString("abc3[cd]xyz"))
 }
