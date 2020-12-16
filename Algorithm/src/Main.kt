@@ -60,7 +60,17 @@ fun main(args: Array<String>) {
 //    println(DecodeString().decodeString("2[abc]3[cd]ef"))
 //    println(DecodeString().decodeString("abc3[cd]xyz"))
 
-    println(SpiralMatrix2().generateMatrix(3))
-    println(SpiralMatrix2().generateMatrix(2))
-    println(SpiralMatrix2().generateMatrix(1))
+    result(SpiralMatrix2().generateMatrix(20))
+//    result(SpiralMatrix2().generateMatrix(6))
+//    result(SpiralMatrix2().generateMatrix(5))
+//    result(SpiralMatrix2().generateMatrix(4))
+//    result(SpiralMatrix2().generateMatrix(3))
+//    result(SpiralMatrix2().generateMatrix(2))
+//    result(SpiralMatrix2().generateMatrix(1))
+}
+
+fun result(array: Array<IntArray>) {
+    for (a in array) {
+        println(a.toList())
+    }
 }
