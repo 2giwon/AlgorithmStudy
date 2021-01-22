@@ -1,15 +1,6 @@
-import leetcode.study.DeleteNodeBST
-import leetcode.study.TreeNode
+import leetcode.study.MinOperations
 
 fun main(args: Array<String>) {
-    val value = TreeNode(5).apply {
-        left = TreeNode(3).apply {
-            left = TreeNode(2)
-            right = TreeNode(4)
-        }
-        right = TreeNode(6).apply {
-            right = TreeNode(7)
-        }
-    }
-    println(DeleteNodeBST().deleteNode(value, 3))
+    println(MinOperations().minOperations(intArrayOf(1,1,4,2,3), 5))
+    println(MinOperations().minOperations(intArrayOf(3,2,20,1,1,3), 10))
 }
