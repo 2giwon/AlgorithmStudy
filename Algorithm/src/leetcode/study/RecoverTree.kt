@@ -41,8 +41,3 @@ class RecoverTree {
         inOrder(root.right)
     }
 }
-
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
