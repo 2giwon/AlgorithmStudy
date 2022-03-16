@@ -19,7 +19,7 @@ package leetcode.grokking
 //Explanation: The odd numbers between 8 and 10 are [9].
 //
 //
-// Constraints: 
+// Constraints:
 //
 //
 // 0 <= low <= high <= 10^9
@@ -28,6 +28,16 @@ package leetcode.grokking
 //leetcode submit region begin(Prohibit modification and deletion)
 class CountOddNumbersInIntervalRange {
     fun countOdds(low: Int, high: Int): Int {
-
+        return if ((high - low + 1) % 2 > 0) {
+            if (isOdd(high) && isOdd(low)) {
+                (high - low + 1) / 2 + (high - low + 1) % 2
+            } else {
+                (high - low + 1) / 2
+            }
+        } else {
+            (high - low + 1) / 2
+        }
     }
+
+    private fun isOdd(num: Int): Boolean = num % 2 > 0
 }
