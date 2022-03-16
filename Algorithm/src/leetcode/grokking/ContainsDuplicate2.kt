@@ -34,12 +34,11 @@ package leetcode.grokking
 // -10⁹ <= nums[i] <= 10⁹
 // 0 <= k <= 10⁵
 //
-// Related Topics 数组 哈希表 滑动窗口 👍 454 👎 0
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     fun containsNearbyDuplicate(nums: IntArray, k: Int): Boolean {
-        return true
+        return false
     }
 }
