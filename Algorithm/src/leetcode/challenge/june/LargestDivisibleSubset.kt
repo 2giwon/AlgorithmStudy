@@ -33,6 +33,6 @@ class LargestDivisibleSubset {
             result.add(subList.toList())
         }
 
-        return result.maxBy { it.size }?.sorted() ?: emptyList()
+        return result.maxByOrNull { it.size }?.sorted() ?: emptyList()
     }
 }

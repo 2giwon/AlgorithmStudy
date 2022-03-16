@@ -9,7 +9,7 @@ class MinOperations {
         var start = nums.lastIndex
         var result = nums.size + 1
 
-        while(sum < x && end < nums.size) {
+        while (sum < x && end < nums.size) {
             sum += nums[end++]
         }
 

@@ -17,8 +17,8 @@ class MinStack {
         return stack.last()
     }
 
-    fun getMin(): Int {
-        return stack.min() ?: 0
+    fun getMin(): Int? {
+        return stack.minOrNull()
     }
 
 }
