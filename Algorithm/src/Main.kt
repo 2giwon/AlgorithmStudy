@@ -1,4 +1,4 @@
-import leetcode.grokking.AverageSalaryExcludingMinMaxSalary
+import dongbin.MaxNumberTheory
 
 fun main(args: Array<String>) {
 //    println(MinOperations().minOperations(intArrayOf(1,1,4,2,3), 5))
@@ -11,6 +11,8 @@ fun main(args: Array<String>) {
 //    println(CountOddNumbersInIntervalRange().countOdds(3, 7))
 //    println(CountOddNumbersInIntervalRange().countOdds(8, 10))
 
-    println(AverageSalaryExcludingMinMaxSalary().average(intArrayOf(4000, 3000, 1000, 2000)))
-    println(AverageSalaryExcludingMinMaxSalary().average(intArrayOf(1000, 2000, 3000)))
+//    println(AverageSalaryExcludingMinMaxSalary().average(intArrayOf(4000, 3000, 1000, 2000)))
+//    println(AverageSalaryExcludingMinMaxSalary().average(intArrayOf(1000, 2000, 3000)))
+
+    println(MaxNumberTheory().solution(intArrayOf(5, 8, 3), intArrayOf(2, 4, 5, 4, 6)))
 }
