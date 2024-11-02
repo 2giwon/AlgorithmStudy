@@ -44,8 +44,3 @@ package leetcode.study
 //
 //
 
-class AssignCookies {
-    fun findContentChildren(g: IntArray, s: IntArray): Int {
-        return 0
-    }
-}
