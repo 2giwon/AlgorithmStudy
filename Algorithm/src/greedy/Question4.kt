@@ -48,7 +48,7 @@ class Question4(
             if (kCount > 0) {
                 result += max
                 kCount--
-            } else { 
+            } else {
                 result += secondMax
                 kCount = k
             }
